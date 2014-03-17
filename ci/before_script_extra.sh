@@ -1,5 +1,7 @@
 #!/bin/bash
 set +e
-if [[ $CI_CONFIG == 'build' ]]; then
+if [[ $CI_CONFIG == 'unit' ]]; then
+    npm install
+elif [[ $CI_CONFIG == 'build' ]]; then
     ./ci/install-android.sh
 fi
