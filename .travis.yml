@@ -13,6 +13,7 @@ before_script:
   - ./ci/install-node.sh
   - ./ci/show-env.sh
   - npm install -g jshint grunt-cli
+  - npm install
   - ./ci/before_script_extra.sh
 script:  
   - ./ci/script.sh
