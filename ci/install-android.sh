@@ -8,8 +8,7 @@ popd
 export ANDROID_ROOT=$HOME/tools/android/adt-bundle-mac-x86_64-20131030
 export ANDROID_HOME=$ANDROID_ROOT/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-ANDROID_UPDATE='android update sdk --no-ui -a'
-echo yes | $ANDROID_UPDATE --filter platform-tools 
-echo yes | $ANDROID_UPDATE --filter android-18 
-echo yes | $ANDROID_UPDATE --filter extra-android-support
-echo yes | $ANDROID_UPDATE --filter extra-android-m2repository
+echo yes | android update sdk --no-ui -a --filter platform-tools 
+echo yes | android update sdk --no-ui -a --filter android-18 
+echo yes | android update sdk --no-ui -a --filter extra-android-support
+echo yes | android update sdk --no-ui -a --filter extra-android-m2repository
