@@ -3,7 +3,7 @@ set +e
 wget -P /tmp http://dl.google.com/android/adt/adt-bundle-mac-x86_64-20131030.zip
 mkdir -p $HOME/tools/android
 pushd $HOME/tools/android 
-unzip -q /tmp/adt-bundle-mac-x86_64-20131030.zip
+unzip /tmp/adt-bundle-mac-x86_64-20131030.zip
 popd
 export ANDROID_ROOT=$HOME/tools/android/adt-bundle-mac-x86_64-20131030
 export ANDROID_HOME=$ANDROID_ROOT/sdk

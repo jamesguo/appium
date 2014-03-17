@@ -5,11 +5,11 @@ notifications:
 # branches:
 #   only:
 #     - master
+env:
+  matrix:
+    - CI_CONFIG=unit
+    - CI_CONFIG=build
 before_script:
-  # - ./ci/install-node.sh
-  - ./ci/install-android.sh
-  # - npm install -g jshint grunt-cli
-  # - npm install
+  - ./ci/before_script.sh
 script:  
-  # - npm test
-  # - ./reset.sh --hardcore --real-safari --ios
+  - ./ci/script.sh
