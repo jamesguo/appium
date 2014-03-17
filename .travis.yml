@@ -2,9 +2,9 @@ language: objective-c
 osx_image: mavericks
 notifications:
   email: false
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
 before_script:
   # - ./ci/install-node.sh
   - ./ci/install-android.sh
