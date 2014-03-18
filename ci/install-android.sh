@@ -1,7 +1,7 @@
 #!/bin/bash
 set +e
 
-COMPONENTS=platform-tools,android-17,sysimg-17,extra-android-support
+COMPONENTS=platform-tools,android-18,sysimg-18,extra-android-support
 
 ( curl -L https://raw.github.com/sebv/android-sdk-installer/mac-support/android-sdk-installer | \
 bash /dev/stdin --install=$COMPONENTS ) &&\
