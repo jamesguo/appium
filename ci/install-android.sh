@@ -1,11 +1,13 @@
 #!/bin/bash
 set +e
 
-COMPONENTS=platform-tools,android-18,extra-android-support,extra-android-m2repository
+COMPONENTS=platform-tools,android-17,sysimg-17,extra-android-support
 
 curl -L https://raw.github.com/sebv/android-sdk-installer/mac-support/android-sdk-installer |\
     bash /dev/stdin --install=$COMPONENTS &&\
     source ~/.android-sdk-installer/env
+
+echo no | android create avd --force -n test -t android-17 --abi armeabi-v7a
 
 # echo 'Downloading android sdk.'
 # wget -P /tmp http://dl.google.com/android/adt/adt-bundle-mac-x86_64-20131030.zip
