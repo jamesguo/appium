@@ -1,8 +1,10 @@
 #!/bin/bash
 set +e
+
 if [[ $CI_CONFIG == 'unit' ]]; then
     npm test
 elif [[ $CI_CONFIG == 'build' ]]; then
+    source ~/.android-sdk-installer/env
     echo "ANDROID_HOME --> $ANDROID_HOME"
     echo "PATH --> $PATH"    
     ./reset.sh --hardcore --verbose
