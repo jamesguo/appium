@@ -3,9 +3,12 @@ set +e
 
 COMPONENTS=platform-tools,android-17,sysimg-17,extra-android-support
 
-curl -L https://raw.github.com/sebv/android-sdk-installer/mac-support/android-sdk-installer |\
-    bash /dev/stdin --install=$COMPONENTS &&\
-    source ~/.android-sdk-installer/env
+( curl -L https://raw.github.com/sebv/android-sdk-installer/mac-support/android-sdk-installer | \
+bash /dev/stdin --install=$COMPONENTS ) &&\
+source ~/.android-sdk-installer/env
+
+echo "ANDROID_HOME --> $ANDROID_HOME"
+echo "PATH --> $PATH"
 
 echo no | android create avd --force -n test -t android-17 --abi armeabi-v7a
 
